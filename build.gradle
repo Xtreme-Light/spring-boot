@@ -2,6 +2,8 @@ buildscript {
 	repositories {
 		maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
 		maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+		maven { url 'https://maven.aliyun.com/repository/grails-core' }
+		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 		maven { url "https://repo.spring.io/plugins-release" }
 	}
 }
@@ -28,13 +30,19 @@ check {
 	dependsOn checkstyleNohttp
 }
 
+
 allprojects {
 	group "org.springframework.boot"
 
 	repositories {
 		mavenLocal()
 		maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
-		maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+		maven { url 'https://maven.aliyun.com/repository/spring' }
+		maven { url 'https://maven.aliyun.com/repository/spring-plugin' }
+		maven { url 'https://maven.aliyun.com/repository/grails-core' }
+		maven { url 'https://maven.aliyun.com/repository/apache-snapshots' }
 		maven { url "https://repo.spring.io/plugins-release" }
 		mavenCentral()
 		if (version.contains('-')) {
